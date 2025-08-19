@@ -58,7 +58,7 @@ export const Cart = () => {
                 <div className="flex-1 min-w-0">
                   <h3 className="font-medium text-foreground mb-1">{item.product.name}</h3>
                   <p className="text-sm text-muted-foreground mb-2">{item.product.brand}</p>
-                  <p className="font-semibold text-primary">${item.product.price}</p>
+                  <p className="font-semibold text-primary">₹{item.product.price}</p>
                 </div>
 
                 {/* Remove Button */}
@@ -90,7 +90,7 @@ export const Cart = () => {
                   </button>
                 </div>
                 <p className="font-semibold text-foreground">
-                  ${(item.product.price * item.quantity).toFixed(2)}
+                  ₹{(item.product.price * item.quantity).toFixed(2)}
                 </p>
               </div>
             </div>
@@ -110,19 +110,19 @@ export const Cart = () => {
           <div className="space-y-2">
             <div className="flex justify-between text-muted-foreground">
               <span>Subtotal:</span>
-              <span>${totalPrice.toFixed(2)}</span>
+              <span>₹{totalPrice.toFixed(2)}</span>
             </div>
             <div className="flex justify-between text-muted-foreground">
               <span>Shipping:</span>
-              <span>{shipping === 0 ? 'Free' : `$${shipping}`}</span>
+              <span>{shipping === 0 ? 'Free' : `₹${shipping}`}</span>
             </div>
             <div className="flex justify-between text-muted-foreground">
               <span>Tax:</span>
-              <span>${tax.toFixed(2)}</span>
+              <span>₹{tax.toFixed(2)}</span>
             </div>
             <div className="flex justify-between text-lg font-semibold text-foreground border-t border-border pt-2">
               <span>Total:</span>
-              <span>${total.toFixed(2)}</span>
+              <span>₹{total.toFixed(2)}</span>
             </div>
           </div>
 

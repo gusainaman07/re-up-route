@@ -1,4 +1,8 @@
 import { Product, Pharmacy } from '@/types';
+import menstrualCupImg from '@/assets/menstrual-cup.jpg';
+import organicPadsImg from '@/assets/organic-pads.jpg';
+import organicTamponsImg from '@/assets/organic-tampons.jpg';
+import periodUnderwearImg from '@/assets/period-underwear.jpg';
 
 export const mockProducts: Product[] = [
   {
@@ -8,7 +12,7 @@ export const mockProducts: Product[] = [
     brand: 'EcoFlow',
     price: 45.99,
     description: 'Premium silicone menstrual cup. Perfect for light to medium flow.',
-    image: '/api/placeholder/300/300',
+    image: menstrualCupImg,
     capacity: '25ml',
     material: 'Medical grade silicone',
     lifespan: '10 years',
@@ -23,7 +27,7 @@ export const mockProducts: Product[] = [
     brand: 'NaturalFlow',
     price: 12.99,
     description: 'Biodegradable organic cotton pads. Chemical-free and ultra-soft.',
-    image: '/api/placeholder/300/300',
+    image: organicPadsImg,
     material: 'Organic cotton',
     lifespan: 'Single use',
     inStock: true,
@@ -37,7 +41,7 @@ export const mockProducts: Product[] = [
     brand: 'PureEarth',
     price: 8.99,
     description: 'Plastic-free organic cotton tampons with cardboard applicator.',
-    image: '/api/placeholder/300/300',
+    image: organicTamponsImg,
     material: 'Organic cotton',
     lifespan: 'Single use',
     inStock: true,
@@ -51,7 +55,7 @@ export const mockProducts: Product[] = [
     brand: 'ComfortWear',
     price: 34.99,
     description: 'Super absorbent period underwear. Holds up to 4 tampons worth.',
-    image: '/api/placeholder/300/300',
+    image: periodUnderwearImg,
     capacity: '35ml',
     material: 'Merino wool & organic cotton',
     lifespan: '2-3 years',
@@ -66,7 +70,7 @@ export const mockProducts: Product[] = [
     brand: 'EcoFlow',
     price: 49.99,
     description: 'Premium silicone menstrual cup. Perfect for heavy flow.',
-    image: '/api/placeholder/300/300',
+    image: menstrualCupImg,
     capacity: '35ml',
     material: 'Medical grade silicone',
     lifespan: '10 years',
@@ -81,7 +85,7 @@ export const mockProducts: Product[] = [
     brand: 'EcoProtect',
     price: 24.99,
     description: 'Washable cloth pads with organic cotton top layer and waterproof backing.',
-    image: '/api/placeholder/300/300',
+    image: organicPadsImg,
     material: 'Organic cotton & bamboo',
     lifespan: '3-5 years',
     inStock: true,

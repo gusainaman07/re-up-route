@@ -80,7 +80,7 @@ export const PharmacyDashboard = () => {
                   <CardTitle className="text-sm font-medium text-muted-foreground">Monthly Revenue</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-2xl font-bold text-primary">${pharmacyStats.monthlyRevenue}</div>
+                  <div className="text-2xl font-bold text-primary">₹{pharmacyStats.monthlyRevenue}</div>
                 </CardContent>
               </Card>
               
@@ -112,7 +112,7 @@ export const PharmacyDashboard = () => {
                     </div>
                     <p className="text-sm text-muted-foreground mb-2">{order.items}</p>
                     <div className="flex items-center justify-between">
-                      <span className="font-semibold text-foreground">${order.total}</span>
+                      <span className="font-semibold text-foreground">₹{order.total}</span>
                       <Button size="sm" variant="outline">
                         View Details
                       </Button>
@@ -148,7 +148,7 @@ export const PharmacyDashboard = () => {
                       <h4 className="font-medium text-foreground mb-1">{product.name}</h4>
                       <p className="text-sm text-muted-foreground mb-2">{product.brand}</p>
                       <div className="flex items-center justify-between">
-                        <span className="font-semibold text-primary">${product.price}</span>
+                        <span className="font-semibold text-primary">₹{product.price}</span>
                         <span className={`px-2 py-1 rounded-full text-xs font-medium ${
                           product.inStock 
                             ? 'bg-primary/10 text-primary' 
@@ -194,7 +194,7 @@ export const PharmacyDashboard = () => {
                   </div>
                   <p className="text-sm text-muted-foreground mb-2">{order.items}</p>
                   <div className="flex items-center justify-between">
-                    <span className="font-semibold text-foreground">${order.total}</span>
+                    <span className="font-semibold text-foreground">₹{order.total}</span>
                     <div className="flex space-x-2">
                       {order.status === 'Pending' && (
                         <Button size="sm" className="bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground">

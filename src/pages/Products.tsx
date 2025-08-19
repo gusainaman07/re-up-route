@@ -103,7 +103,7 @@ export const Products = () => {
               </h3>
               <p className="text-xs text-muted-foreground mb-2">{product.brand}</p>
               <div className="flex items-center justify-between mb-3">
-                <span className="font-semibold text-primary">${product.price}</span>
+                <span className="font-semibold text-primary">₹{product.price}</span>
                 <div className="flex items-center">
                   <Star size={12} className="text-nature-gold fill-current mr-1" />
                   <span className="text-xs text-muted-foreground">{product.rating}</span>

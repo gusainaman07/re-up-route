@@ -18,35 +18,19 @@ export const Welcome = () => {
       <div className="flex flex-col min-h-screen bg-gradient-subtle">
         {/* Hero Section */}
         <div className="flex-1 flex flex-col items-center justify-center px-6 text-center">
-          <div className="mb-8">
-            <div className="w-20 h-20 mx-auto mb-4 bg-primary rounded-full flex items-center justify-center">
-              <Leaf size={32} className="text-primary-foreground" />
+          <div className="mb-12">
+            <div className="w-24 h-24 mx-auto mb-6 bg-primary rounded-full flex items-center justify-center">
+              <Leaf size={40} className="text-primary-foreground" />
             </div>
-            <h1 className="text-3xl font-bold text-foreground mb-2">
+            <h1 className="text-4xl font-bold text-foreground mb-3">
               EcoFlow
             </h1>
-            <p className="text-lg text-muted-foreground mb-2">
+            <p className="text-xl text-muted-foreground mb-3">
               Sustainable Period Care
             </p>
-            <p className="text-sm text-muted-foreground max-w-sm">
+            <p className="text-base text-muted-foreground max-w-md">
               Connecting students with eco-friendly menstrual products through local pharmacies
             </p>
-          </div>
-
-          {/* Features */}
-          <div className="w-full max-w-sm space-y-4 mb-8">
-            <div className="bg-card rounded-xl p-4 shadow-soft">
-              <h3 className="font-medium text-foreground mb-1">🌱 Eco-Friendly</h3>
-              <p className="text-sm text-muted-foreground">Sustainable, reusable menstrual products</p>
-            </div>
-            <div className="bg-card rounded-xl p-4 shadow-soft">
-              <h3 className="font-medium text-foreground mb-1">🏪 Local Pickup</h3>
-              <p className="text-sm text-muted-foreground">Order online, collect from nearby pharmacies</p>
-            </div>
-            <div className="bg-card rounded-xl p-4 shadow-soft">
-              <h3 className="font-medium text-foreground mb-1">💡 Student-Led</h3>
-              <p className="text-sm text-muted-foreground">Supporting new-age distributors</p>
-            </div>
           </div>
         </div>
 

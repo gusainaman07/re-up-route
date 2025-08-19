@@ -54,7 +54,7 @@ export const ProductDetail = () => {
           <div>
             <div className="flex items-center justify-between mb-2">
               <h1 className="text-xl font-bold text-foreground">{product.name}</h1>
-              <span className="text-2xl font-bold text-primary">${product.price}</span>
+              <span className="text-2xl font-bold text-primary">₹{product.price}</span>
             </div>
             <p className="text-muted-foreground mb-3">{product.brand}</p>
             

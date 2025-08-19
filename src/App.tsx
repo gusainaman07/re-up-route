@@ -15,6 +15,7 @@ import { ProductDetail } from "./pages/ProductDetail";
 import { Cart } from "./pages/Cart";
 import { Checkout } from "./pages/Checkout";
 import { Profile } from "./pages/Profile";
+import { EditProfile } from "./pages/EditProfile";
 import { PharmacyVerification } from "./pages/PharmacyVerification";
 import { PharmacyDashboard } from "./pages/PharmacyDashboard";
 import NotFound from "./pages/NotFound";
@@ -38,6 +39,7 @@ const App = () => (
               <Route path="/cart" element={<Cart />} />
               <Route path="/checkout" element={<Checkout />} />
               <Route path="/profile" element={<Profile />} />
+              <Route path="/edit-profile" element={<EditProfile />} />
               <Route path="/pharmacy-verification" element={<PharmacyVerification />} />
               <Route path="/pharmacy-dashboard" element={<PharmacyDashboard />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

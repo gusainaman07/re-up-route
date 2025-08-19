@@ -58,7 +58,11 @@ export const Profile = () => {
           </Avatar>
           <h2 className="text-xl font-semibold text-foreground mb-1">{user?.name}</h2>
           <p className="text-muted-foreground mb-4">{user?.email}</p>
-          <Button variant="outline" className="btn-secondary">
+          <Button 
+            variant="outline" 
+            className="btn-secondary"
+            onClick={() => navigate('/edit-profile')}
+          >
             <Edit size={16} className="mr-2" />
             Edit Profile
           </Button>
@@ -75,7 +79,7 @@ export const Profile = () => {
             <div className="text-xs text-muted-foreground">Favorites</div>
           </div>
           <div className="bg-card rounded-xl p-4 text-center shadow-soft">
-            <div className="text-2xl font-bold text-primary mb-1">$148</div>
+            <div className="text-2xl font-bold text-primary mb-1">₹148</div>
             <div className="text-xs text-muted-foreground">Saved</div>
           </div>
         </div>
@@ -128,7 +132,7 @@ export const Profile = () => {
                 </div>
                 <div className="flex items-center justify-between text-sm text-muted-foreground">
                   <span>{order.date}</span>
-                  <span className="font-semibold text-foreground">${order.total}</span>
+                  <span className="font-semibold text-foreground">₹{order.total}</span>
                 </div>
               </div>
             ))}

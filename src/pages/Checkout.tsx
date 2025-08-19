@@ -74,14 +74,14 @@ export const Checkout = () => {
                     {item.product.name} x{item.quantity}
                   </span>
                   <span className="font-medium text-foreground">
-                    ${(item.product.price * item.quantity).toFixed(2)}
+                    ₹{(item.product.price * item.quantity).toFixed(2)}
                   </span>
                 </div>
               ))}
               <div className="border-t border-border pt-2 mt-3">
                 <div className="flex justify-between text-sm mb-1">
                   <span className="text-muted-foreground">Subtotal:</span>
-                  <span className="text-foreground">${totalPrice.toFixed(2)}</span>
+                  <span className="text-foreground">₹{totalPrice.toFixed(2)}</span>
                 </div>
                 <div className="flex justify-between text-sm mb-1">
                   <span className="text-muted-foreground">Shipping:</span>
@@ -89,11 +89,11 @@ export const Checkout = () => {
                 </div>
                 <div className="flex justify-between text-sm mb-2">
                   <span className="text-muted-foreground">Tax:</span>
-                  <span className="text-foreground">${tax.toFixed(2)}</span>
+                  <span className="text-foreground">₹{tax.toFixed(2)}</span>
                 </div>
                 <div className="flex justify-between font-semibold text-foreground">
                   <span>Total:</span>
-                  <span>${total.toFixed(2)}</span>
+                  <span>₹{total.toFixed(2)}</span>
                 </div>
               </div>
             </div>
@@ -187,7 +187,7 @@ export const Checkout = () => {
             ) : (
               <>
                 <Check size={20} className="mr-2" />
-                Place Order - ${total.toFixed(2)}
+                Place Order - ₹{total.toFixed(2)}
               </>
             )}
           </Button>
