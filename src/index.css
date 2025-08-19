@@ -1,97 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Eco-friendly menstrual product app design system - Earth tones and sustainable aesthetics */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Light mode - Earth tone color palette */
+    --background: 120 20% 98%; /* Very light mint green */
+    --foreground: 0 0% 20%; /* Dark gray for text */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%; /* Pure white for cards */
+    --card-foreground: 0 0% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 0 0% 20%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary: Eco-friendly teal/forest green */
+    --primary: 158 50% 35%; /* Forest/teal green #2E8B57 */
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 158 40% 85%; /* Light teal for backgrounds */
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary: Sage green */
+    --secondary: 120 20% 90%; /* Light sage green */
+    --secondary-foreground: 158 50% 35%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted: Beige/neutral tones */
+    --muted: 30 15% 92%; /* Light beige */
+    --muted-foreground: 0 0% 40%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent: Warm earth tone */
+    --accent: 25 40% 75%; /* Soft peach/warm beige */
+    --accent-foreground: 0 0% 20%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Nature-inspired additional colors */
+    --earth-brown: 30 25% 45%; /* Warm brown */
+    --soft-pink: 340 30% 85%; /* Gentle pink */
+    --nature-gold: 45 60% 70%; /* Muted gold */
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --radius: 0.5rem;
+    --border: 120 20% 88%; /* Light sage border */
+    --input: 120 20% 95%; /* Very light background for inputs */
+    --ring: 158 50% 35%;
 
-    --sidebar-background: 0 0% 98%;
+    --radius: 0.75rem; /* More rounded for friendly feel */
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* App-specific gradients */
+    --gradient-eco: linear-gradient(135deg, hsl(158 50% 35%) 0%, hsl(120 40% 40%) 100%);
+    --gradient-earth: linear-gradient(135deg, hsl(25 40% 75%) 0%, hsl(30 25% 65%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(120 20% 98%) 0%, hsl(120 15% 95%) 100%);
 
-    --sidebar-primary: 240 5.9% 10%;
+    /* Mobile-optimized shadows */
+    --shadow-soft: 0 2px 8px -2px hsl(158 50% 35% / 0.1);
+    --shadow-card: 0 4px 12px -4px hsl(158 50% 35% / 0.15);
+    --shadow-floating: 0 8px 24px -8px hsl(158 50% 35% / 0.2);
 
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.15s ease-out;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 158 20% 8%; /* Dark green background */
+    --foreground: 120 20% 95%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 158 15% 10%;
+    --card-foreground: 120 20% 95%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 158 15% 10%;
+    --popover-foreground: 120 20% 95%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 158 45% 55%; /* Brighter green for dark mode */
+    --primary-foreground: 158 20% 8%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 158 15% 15%;
+    --secondary-foreground: 120 20% 90%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 158 10% 15%;
+    --muted-foreground: 120 15% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 25 30% 25%;
+    --accent-foreground: 120 20% 95%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 158 15% 20%;
+    --input: 158 15% 15%;
+    --ring: 158 45% 55%;
   }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-feature-settings: 'cv01', 'cv03', 'cv04', 'cv11';
+  }
+
+  /* Mobile-first responsive typography */
+  h1 { @apply text-2xl font-bold tracking-tight; }
+  h2 { @apply text-xl font-semibold tracking-tight; }
+  h3 { @apply text-lg font-medium; }
+  h4 { @apply text-base font-medium; }
+
+  /* Smooth scrolling for mobile */
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  /* Mobile touch optimization */
+  button, [role="button"] {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+}
+
+@layer components {
+  /* App-specific component styles */
+  .mobile-container {
+    @apply max-w-sm mx-auto bg-background min-h-screen relative;
+  }
+
+  .nav-bottom {
+    @apply fixed bottom-0 left-1/2 transform -translate-x-1/2 w-full max-w-sm bg-card border-t border-border px-4 py-2 z-50;
+  }
+
+  .product-card {
+    @apply bg-card rounded-xl p-4 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-floating)] transition-[var(--transition-smooth)];
+  }
+
+  .btn-eco {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 active:scale-95 transition-[var(--transition-fast)] rounded-full px-6 py-3 font-medium shadow-[var(--shadow-soft)];
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground hover:bg-secondary/80 active:scale-95 transition-[var(--transition-fast)] rounded-full px-6 py-3 font-medium;
+  }
+
+  .input-eco {
+    @apply bg-input border-border rounded-xl px-4 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring transition-[var(--transition-fast)];
+  }
+
+  .gradient-eco {
+    background: var(--gradient-eco);
+  }
+
+  .gradient-earth {
+    background: var(--gradient-earth);
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.3s ease-out forwards;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
 }
 
 @layer base {
