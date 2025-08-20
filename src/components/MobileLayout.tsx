@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import { Chatbot } from './Chatbot';
 
 interface MobileLayoutProps {
   children: ReactNode;
@@ -11,6 +12,7 @@ export const MobileLayout = ({ children, showNavigation = true }: MobileLayoutPr
       <main className={showNavigation ? "pb-20" : ""}>
         {children}
       </main>
+      <Chatbot />
     </div>
   );
 };
