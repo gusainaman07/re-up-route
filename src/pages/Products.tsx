@@ -90,13 +90,12 @@ export const Products = () => {
               onClick={() => handleProductClick(product)}
               className="product-card cursor-pointer"
             >
-              <div className="aspect-square bg-gradient-earth rounded-lg mb-3 flex items-center justify-center">
-                <div className="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center">
-                  <span className="text-2xl">
-                    {product.type === 'cup' ? '🥤' : product.type === 'pad' ? '🟤' : 
-                     product.type === 'tampon' ? '🔸' : '👙'}
-                  </span>
-                </div>
+              <div className="aspect-square bg-gradient-earth rounded-lg mb-3 overflow-hidden">
+                <img 
+                  src={product.image} 
+                  alt={product.name}
+                  className="w-full h-full object-cover"
+                />
               </div>
               <h3 className="font-medium text-foreground text-sm mb-1 line-clamp-2">
                 {product.name}
