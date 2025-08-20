@@ -138,11 +138,12 @@ export const PharmacyDashboard = () => {
               {managedProducts.map((product) => (
                 <div key={product.id} className="bg-card rounded-xl p-4 shadow-soft">
                   <div className="flex items-start space-x-4">
-                    <div className="w-16 h-16 bg-gradient-earth rounded-lg flex items-center justify-center flex-shrink-0">
-                      <span className="text-2xl">
-                        {product.type === 'cup' ? '🥤' : product.type === 'pad' ? '🟤' : 
-                         product.type === 'tampon' ? '🔸' : '👙'}
-                      </span>
+                    <div className="w-16 h-16 bg-gradient-earth rounded-lg overflow-hidden flex-shrink-0">
+                      <img 
+                        src={product.image} 
+                        alt={product.name}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                     <div className="flex-1 min-w-0">
                       <h4 className="font-medium text-foreground mb-1">{product.name}</h4>

@@ -40,11 +40,12 @@ export const ProductDetail = () => {
       <div className="flex flex-col min-h-screen">
         {/* Product Image */}
         <div className="bg-gradient-earth p-8 flex items-center justify-center">
-          <div className="w-32 h-32 bg-white/20 rounded-2xl flex items-center justify-center">
-            <span className="text-6xl">
-              {product.type === 'cup' ? '🥤' : product.type === 'pad' ? '🟤' : 
-               product.type === 'tampon' ? '🔸' : '👙'}
-            </span>
+          <div className="w-32 h-32 bg-white/10 rounded-2xl overflow-hidden">
+            <img 
+              src={product.image} 
+              alt={product.name}
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
 

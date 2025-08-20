@@ -47,11 +47,12 @@ export const Cart = () => {
             <div key={item.id} className="bg-card rounded-xl p-4 shadow-soft">
               <div className="flex items-start space-x-4">
                 {/* Product Image */}
-                <div className="w-16 h-16 bg-gradient-earth rounded-lg flex items-center justify-center flex-shrink-0">
-                  <span className="text-2xl">
-                    {item.product.type === 'cup' ? '🥤' : item.product.type === 'pad' ? '🟤' : 
-                     item.product.type === 'tampon' ? '🔸' : '👙'}
-                  </span>
+                <div className="w-16 h-16 bg-gradient-earth rounded-lg overflow-hidden flex-shrink-0">
+                  <img 
+                    src={item.product.image} 
+                    alt={item.product.name}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
 
                 {/* Product Info */}
